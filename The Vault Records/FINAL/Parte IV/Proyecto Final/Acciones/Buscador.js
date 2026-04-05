@@ -13,31 +13,18 @@ function toggleMenu(){
 
 // BUSCADOR DE ARTISTAS
 let buscador = document.getElementById("inputBuscador");
-
 buscador.addEventListener("keyup", buscarArtista);
-
 function buscarArtista(){
-
     let texto = buscador.value.toLowerCase();
-
     let grupos = document.querySelectorAll(".grupo-artista");
-
     grupos.forEach(function(grupo){
-
         let nombre = grupo.dataset.artista;
-
         if(nombre.includes(texto)){
-
             grupo.style.display = "block";
-
         }else{
-
             grupo.style.display = "none";
-
         }
-
     });
-
 }
 // Primero obtiene el input con id "inputBuscador" 
 // Luego ejecuta la función buscarArtista, que:
