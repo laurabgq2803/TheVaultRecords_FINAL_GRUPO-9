@@ -1,29 +1,30 @@
+/* variables de colores */
 :root{
-  --bg-dark: #1A1A1B;
-  --text-light: #FFFFFF;
-  --detail: #83b888;
-  --action: #83b888;
-  --white-card: #FFFFFF;
+  --bg-dark: #1A1A1B; /* fondo oscuro */
+  --text-light: #FFFFFF; /* texto claro */
+  --detail: #83b888; /* color principal */
+  --action: #83b888; /* mismo color para acciones */
+  --white-card: #FFFFFF; /* fondo blanco para tarjetas */
 }
 
+/* reset básico */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* estilos generales */
 body{
-  background-color: var(--detail);
+  background-color: var(--detail); /* fondo verde */
   font-family: 'Montserrat', sans-serif;
-  color: var(--bg-dark);
+  color: var(--bg-dark); /* texto oscuro */
 }
 
-/* =========================
-   🔥 TOPBAR
-========================= */
+/* barra superior */
 .topbar{
   background-color: #000000;
-  border-bottom: 2px solid #83b888;
+  border-bottom: 2px solid #83b888; /* línea abajo */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,53 +34,49 @@ body{
   height: 60px;
 }
 
+/* título del topbar */
 .topbar h1{
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Montserrat', sans-serif;
+  transform: translateX(-50%); /* centrado */
   font-size: 2rem;
   font-weight: 700;
   color: white;
 }
 
-/* =========================
-   🔥 MENÚ IZQUIERDA
-========================= */
+/* menú lado izquierdo */
 .menu-nav{
   position: absolute;
   left: 20px;
   z-index: 1100;
 }
 
+/* oculto checkbox */
 #menu-toggle{
   display: none;
 }
 
+/* botón hamburguesa */
 .menu-button{
-  position: relative;
-  z-index: 1101;
   display: flex;
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
 }
 
+/* líneas del botón */
 .menu-button span{
-  display: block;
   width: 28px;
   height: 3px;
   background-color: #83b888;
   transition: 0.3s ease;
 }
 
-/* =========================
-   🔥 SIDE MENU (FIX)
-========================= */
+/* menú lateral */
 .side-menu{
   position: fixed;
   top: 0;
-  left: -300px;
+  left: -300px; /* oculto */
   width: 300px;
   height: 100vh;
   background: #050b0c;
@@ -90,15 +87,17 @@ body{
   z-index: 1000;
 }
 
+/* cuando se activa el checkbox se muestra */
 #menu-toggle:checked ~ .side-menu{
   left: 0;
 }
 
+/* botón cerrar (no se usa) */
 .close-btn{
   display: none;
 }
 
-/* links */
+/* links del menú */
 .menu-links{
   display: flex;
   flex-direction: column;
@@ -107,39 +106,37 @@ body{
 .menu-links a{
   color: #cfcfcf;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
   padding: 18px 35px;
   text-transform: uppercase;
-  transition: 0.2s;
 }
 
+/* hover */
 .menu-links a:hover{
   color: #ffffff;
 }
 
-/* =========================
-   CONTENIDO
-========================= */
+/* contenido principal */
 .main-content{
   max-width: 1180px;
-  margin: 0 auto;
+  margin: 0 auto; /* centrado */
   padding: 34px 24px 50px;
 }
 
-/* tarjeta */
+/* tarjeta principal */
 .about-card{
   background-color: var(--white-card);
   border-radius: 24px;
   padding: 28px 34px;
-  display: flex;
+  display: flex; /* uso flex */
   align-items: center;
   gap: 30px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.14);
   margin-bottom: 34px;
 }
 
+/* contenedor de imagen */
 .image-box{
   width: 140px;
   height: 140px;
@@ -149,33 +146,34 @@ body{
   justify-content: center;
 }
 
+/* imagen */
 .image-box img{
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: contain; /* ajusta la imagen */
 }
 
+/* texto del about */
 .about-text h1{
-  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
 .about-text p{
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   max-width: 760px;
 }
 
-/* misión visión */
+/* sección misión visión */
 .mv-section{
   display: grid;
-  grid-template-columns: 1fr 180px 1fr;
+  grid-template-columns: 1fr 180px 1fr; /* tres columnas */
   align-items: center;
   gap: 28px;
 }
 
+/* cajas de misión y visión */
 .mv-box{
   background-color: rgba(255,255,255,0.18);
   border: 2px solid rgba(255,255,255,0.25);
@@ -185,42 +183,37 @@ body{
   box-shadow: 0 8px 24px rgba(0,0,0,0.10);
 }
 
+/* títulos */
 .mv-box h2{
-  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   margin-bottom: 14px;
 }
 
+/* texto */
 .mv-box p{
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
 }
 
+/* imagen del centro */
 .center-image{
   margin: 0 auto;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* responsive */
 @media (max-width: 900px){
 
   .topbar h1{
-    font-size: 1.5rem;
-  }
-
-  .menu-nav{
-    left: 20px;
+    font-size: 1.5rem; /* reduce tamaño */
   }
 
   .about-card{
-    flex-direction: column;
+    flex-direction: column; /* se pone en columna */
     text-align: center;
   }
 
   .mv-section{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* una sola columna */
   }
 
   .image-box{
