@@ -68,6 +68,8 @@ body{
   flex-direction: column; /* líneas una debajo de otra */
   gap: 6px;
   cursor: pointer;
+  z-index: 1200;
+  position: relative;
 }
 
 /* líneas del botón */
