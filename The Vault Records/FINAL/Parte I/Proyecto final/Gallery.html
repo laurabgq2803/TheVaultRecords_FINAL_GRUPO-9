@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Gallery | The Vault Records</title>
+    <title>Página Principal | The Vault Records</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="icon" href="images/branding/icon2.png" type="image/png" sizes="45x45">
@@ -31,10 +31,13 @@
     </header>
 
     <main id="info-section">
-        
+        <!--Arquitectura del Slider Multipantalla: Define un contenedor de ancho extendido al 700% para albergar las unidades individuales de los 5 artistas, 
+        permitiendo una transición suave mediante curvas de Bézier.-->
         <div class="slider-container">
             <div class="slider">
                 
+                <!--Capa de Legibilidad Multimedia: Aplica un filtro de brillo reducido (brightness) a las imágenes de fondo para garantizar que el texto promocional blanco
+                mantenga un contraste alto y sea legible para el usuario (Aplica para todas las imagénes del Slider).-->
                 <div class="slide-unit">
                     <img src="images/artists/ts.png" class="slide" alt="Taylor Swift">
                     <div class="slider-text">
@@ -113,6 +116,8 @@
 
             </div>
 
+            <!--Controladores de Navegación Inmersivos: Configura las flechas laterales y los indicadores de punto (dots)
+            con efectos de desenfoque (backdrop-filter) para integrarlos estéticamente sobre el contenido visual sin obstruirlo.-->
             <button class="slider-nav prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="slider-nav next" onclick="moveSlide(1)">&#10095;</button>
 
@@ -133,7 +138,9 @@
     
     <div class="arrivals-wrapper">
         <button class="arrival-nav" onclick="moveArrivals(-1)">&#10094;</button>
-        
+
+        <!--Simulación de Interacción Física (Efecto Vinilo): Gestiona la animación de rotación y traslación de los discos mediante transformaciones CSS que se activan al pasar el cursor (hover),
+        emulando la experiencia de sacar un vinilo de su funda.-->        
         <div class="arrivals-window">
             <div class="arrivals-container" id="arrivals-slider">
                 <div class="product-card">
