@@ -1,0 +1,231 @@
+        // ── DATOS DE NOTICIAS ─────────────────────────────────────────
+        // Objeto que almacena toda la información de cada noticia.
+        // La clave (ej: 'taylor') conecta el botón "Ver" con su contenido.
+        const noticias = {
+            taylor: {
+                titulo: "Taylor Swift",
+                imagen: "imagenes/tayloropalite.jpg",
+                contenido: `
+                    <p><strong>"Opalite"</strong>, el segundo sencillo del duodécimo álbum de Taylor Swift <em>The Life of a Showgirl</em> (2025), alcanzó el <strong>#1 en el Billboard Hot 100</strong> en febrero de 2026, convirtiéndose en su segundo número uno del mismo álbum desde <em>1989</em>.</p>
+                    <p>La canción, escrita junto a Max Martin y Shellback, es una metáfora sobre la felicidad como algo que puede crearse voluntariamente &mdash; igual que una "opalita", un ópalo sintético. Swift explicó que la inspiración vino del hecho de que el ópalo es la piedra de nacimiento de Travis Kelce.</p>
+                    <p>El video musical, estrenado el 6 de febrero en Apple Music y Spotify, está ambientado en los años 90 y cuenta con las actuaciones de Domhnall Gleeson, Greta Lee, Cillian Murphy, Lewis Capaldi y Graham Norton.</p>
+                    <p>Previamente, <em>The Life of a Showgirl</em> batió récords al vender más de 4 millones de unidades equivalentes en su primera semana en EE.UU.</p>
+                    <p>
+                        <a href="https://www.billboard.com/music/pop/taylor-swift-opalite-music-video-announced-release-date-1236173572/" target="_blank" rel="noopener">📰 Billboard – Anuncio del video de "Opalite"</a><br>
+                        <a href="https://en.wikipedia.org/wiki/Opalite_(song)" target="_blank" rel="noopener">📖 Wikipedia – "Opalite" (canción)</a><br>
+                        <a href="https://www.rollingstone.com/music/music-news/taylor-swift-opalite-music-video-1235511440/" target="_blank" rel="noopener">🎸 Rolling Stone – Reseña del video musical</a>
+                    </p>`
+            },
+            kanye: {
+                titulo: "Kanye West",
+                imagen: "imagenes/kanyewestbully.jpg",
+                contenido: `
+                    <p>Tras años de retrasos, <strong>BULLY</strong>, el duodécimo álbum de estudio de Ye (Kanye West), tiene fecha de lanzamiento confirmada: <strong>27 de marzo de 2026</strong>, a través de su sello YZY en asociación con la compañía independiente Gamma.</p>
+                    <p>El álbum de <strong>13 canciones</strong> &mdash; entre ellas "Preacher Man", "Beauty and the Beast" y "Last Breath" &mdash; explora temas de <em>remordimiento, memoria, ego, fe y consecuencia</em>.</p>
+                    <p>El lanzamiento llega poco después de que Ye publicara en enero de 2026 un anuncio de página completa en <em>The Wall Street Journal</em> disculpándose por años de declaraciones antisemitas.</p>
+                    <p>Para apoyar el álbum, Ye anunció conciertos en el SoFi Stadium de Los Ángeles el 1 y 3 de abril de 2026, su primera presentación en la ciudad desde 2021.</p>
+                    <p>
+                        <a href="https://www.rollingstone.com/music/music-news/kanye-west-bully-release-date-signs-with-gamma-1235506094/" target="_blank" rel="noopener">📰 Rolling Stone – Fecha de lanzamiento de BULLY</a><br>
+                        <a href="https://en.wikipedia.org/wiki/Bully_(album)" target="_blank" rel="noopener">📖 Wikipedia – BULLY (álbum)</a><br>
+                        <a href="https://www.nme.com/news/music/kanye-west-ye-bully-release-date-confirmed-3920084" target="_blank" rel="noopener">🎵 NME – Confirmación oficial del álbum</a>
+                    </p>`
+            },
+            charli: {
+                titulo: "Charli XCX",
+                imagen: "imagenes/charlixcxw.jpg",
+                contenido: `
+                    <p>El cover de <strong>"Wuthering Heights"</strong> de Charli XCX debutó en el <strong>#1 en el UK Singles Chart</strong>, consolidando su racha de éxitos tras el fenómeno global de <em>Brat</em> (2024).</p>
+                    <p>La canción recibió aclamación crítica universal, obteniendo una puntuación perfecta en Metacritic y siendo calificada como una de las mejores canciones del año por múltiples publicaciones especializadas.</p>
+                    <p>
+                        <a href="https://www.nme.com/news/music/charli-xcx-wuthering-heights-number-one" target="_blank" rel="noopener">📰 NME – "Wuthering Heights" llega al #1</a>
+                    </p>`
+            },
+            tyler: {
+                titulo: "Tyler, The Creator",
+                imagen: "imagenes/tylerchromakopia.jpg",
+                contenido: `
+                    <p>La gira mundial <strong>"Chromakopia World Tour"</strong> de Tyler, The Creator está llegando a su recta final, habiendo recorrido los principales recintos de Norteamérica, Europa y Oceanía.</p>
+                    <p>El tour, que apoya su álbum <em>Chromakopia</em> (2024), fue aclamado por su producción visual innovadora y la energía de sus presentaciones en vivo.</p>
+                    <p>
+                        <a href="https://www.rollingstone.com/music/music-news/tyler-the-creator-chromakopia-tour" target="_blank" rel="noopener">🎸 Rolling Stone – Cobertura de la gira</a>
+                    </p>`
+            },
+            cavetown: {
+                titulo: "Cavetown",
+                imagen: "imagenes/cavetown.jpg",
+                contenido: `
+                    <p>El nuevo álbum de Cavetown, <strong>"Running With Scissors"</strong>, recibió aclamación universal en Metacritic, convirtiéndose en uno de los lanzamientos indie más celebrados del año.</p>
+                    <p>El proyecto consolida a Robin Skinner como una de las voces más auténticas de la generación Z en la escena alternativa global.</p>
+                    <p>
+                        <a href="https://www.metacritic.com/music/running-with-scissors/cavetown" target="_blank" rel="noopener">📊 Metacritic – Puntuaciones de la crítica</a>
+                    </p>`
+            },
+            beatles: {
+                titulo: "The Beatles",
+                imagen: "imagenes/thebeatles.jpg",
+                contenido: `
+                    <p>En noviembre de 2025, para celebrar el <strong>30 aniversario</strong> del proyecto original, Apple Corps lanzó una versión restaurada y remasterizada de <em>The Beatles Anthology</em>, disponible en <strong>Disney+</strong> desde el 26 de noviembre de 2025.</p>
+                    <p>La serie fue restaurada por el equipo de Peter Jackson (Park Road Post) y expandida con un <strong>nuevo Episodio 9</strong> con imágenes inéditas de Paul McCartney, George Harrison y Ringo Starr trabajando juntos en los años 90.</p>
+                    <p>Se lanzó también <em>The Anthology Collection</em>, una caja con los álbumes Anthology 1, 2 y 3 remasterizados por Giles Martin, más el nuevo <strong>Anthology 4</strong> con <strong>13 grabaciones inéditas</strong>, incluyendo demos tempranos y tomas de estudio.</p>
+                    <p>De cara a 2028, Sam Mendes dirigirá <em>The Beatles — A Four-Film Cinematic Event</em>, cuatro biopics individuales sobre cada integrante del grupo.</p>
+                    <p>
+                        <a href="https://www.thebeatles.com" target="_blank" rel="noopener">🌐 Sitio oficial – The Beatles</a><br>
+                        <a href="https://www.rollingstone.com/music/music-features/beatles-anthology-documentary-interview-1235471257/" target="_blank" rel="noopener">🎸 Rolling Stone – Análisis del Anthology restaurado</a><br>
+                        <a href="https://www.disneyplus.com/explore/articles/the-beatles-anthology-documentary" target="_blank" rel="noopener">📺 Disney+ – Ver la serie</a>
+                    </p>`
+            },
+            dua: {
+                titulo: "Dua Lipa",
+                imagen: "imagenes/duabritawards.jpg",
+                contenido: `
+                    <p>El <strong>28 de febrero de 2026</strong>, Dua Lipa protagonizó uno de los momentos más comentados de los <strong>BRIT Awards 2026</strong>, celebrados por primera vez fuera de Londres, en el Co-op Live Arena de Manchester.</p>
+                    <p>La cantante irrumpió como invitada sorpresa durante la actuación homenaje de Mark Ronson, quien recibió el premio <em>Outstanding Contribution to Music</em>. Descendió desde el techo sobre una gigantesca bola de discoteca para interpretar juntos <strong>"Dance the Night"</strong> y <strong>"Electricity"</strong>.</p>
+                    <p>Tras el evento, Lipa publicó en Instagram: <em>"What an honour to join my dear friend Mark Ronson on stage... Mark, you're a true trailblazer. Your talent, heart, and passion inspire us all."</em></p>
+                    <p>La noche también incluyó apariciones de Ghostface Killah y los Dap-Kings en un tributo especial a Amy Winehouse.</p>
+                    <p>
+                        <a href="https://www.nme.com/news/music/watch-dua-lipa-and-ghostface-killah-join-mark-ronson-for-career-spanning-medley-at-brits-2026-3932084" target="_blank" rel="noopener">📰 NME – Cobertura completa de los BRIT Awards 2026</a><br>
+                        <a href="https://www.rollingstone.co.uk/music/news/watch-mark-ronson-pay-tribute-to-amy-winehouse-at-brit-awards-2026-58909/" target="_blank" rel="noopener">🎸 Rolling Stone UK – Video del homenaje</a>
+                    </p>`
+            }
+        };
+
+        // ── MENÚ LATERAL ──────────────────────────────────────────────
+        // Seleccionamos los elementos del DOM que necesitamos para el menú.
+        const menuBtn     = document.getElementById('menuBtn');
+        const sideMenu    = document.getElementById('sideMenu');
+        const closeBtn    = document.getElementById('closeBtn');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        // Abre el menú: agrega la clase 'open' y bloquea el scroll de la página
+        function openMenu() {
+            sideMenu.classList.add('open');
+            menuOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Cierra el menú: quita la clase 'open' y restaura el scroll
+        function closeMenu() {
+            sideMenu.classList.remove('open');
+            menuOverlay.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Al hacer clic en el botón hamburguesa, alterna entre abrir y cerrar
+        // e.stopPropagation() evita que el clic se propague al documento
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (sideMenu.classList.contains('open')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        // El botón X y el fondo oscuro también cierran el menú
+        closeBtn.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // ── MODAL DE NOTICIAS ─────────────────────────────────────────
+        // Referencias a los elementos del modal que se llenan dinámicamente
+        const modal      = document.getElementById('myModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody  = document.getElementById('modalBody');
+        const modalImage = document.getElementById('modalImage');
+
+        // Mapeo de hash de URL a clave de noticia.
+        // Permite abrir una noticia directamente desde un enlace (ej: página.html#taylor)
+        const hashToNews = {
+            '#taylor': 'taylor',
+            '#kanye': 'kanye',
+            '#charli': 'charli',
+            '#tyler': 'tyler',
+            '#cavetown': 'cavetown',
+            '#beatles': 'beatles',
+            '#dua': 'dua'
+        };
+
+        // Actualiza el hash de la URL sin recargar la página (para compartir enlaces)
+        function syncNewsHash(key) {
+            const nextUrl = `${window.location.pathname}${window.location.search}#${key}`;
+            if (window.location.hash.toLowerCase() !== `#${key}`) {
+                history.replaceState(null, '', nextUrl);
+            }
+        }
+
+        // Limpia el hash de la URL al cerrar el modal
+        function clearNewsHash() {
+            if (window.location.hash) {
+                history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+            }
+        }
+
+        // Abre el modal: busca los datos por clave, los inyecta en el HTML y muestra el modal
+        function openModal(key, syncHash = true) {
+            const data = noticias[key];
+
+            // Si la clave no existe, no hace nada
+            if (!data) {
+                return;
+            }
+
+            // Rellena el modal con título, contenido e imagen del artista
+            modalTitle.innerText         = data.titulo;
+            modalBody.innerHTML          = data.contenido;
+            modalImage.src               = data.imagen;
+            modalImage.alt               = `Noticia de ${data.titulo}`;
+            modal.style.display          = 'flex';
+            document.body.style.overflow = 'hidden'; // Bloquea el scroll de fondo
+
+            // Sincroniza el hash de la URL solo si se pide (por defecto sí)
+            if (syncHash) {
+                syncNewsHash(key);
+            }
+        }
+
+        // Cierra el modal: lo oculta, restaura el scroll y limpia la imagen
+        function closeModal(clearHash = true) {
+            modal.style.display          = 'none';
+            document.body.style.overflow = 'auto';
+            modalImage.src               = ''; // Libera la imagen de memoria
+
+            if (clearHash) {
+                clearNewsHash();
+            }
+        }
+
+        // Cierra el modal si el usuario hace clic fuera del contenido (en el fondo oscuro)
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+
+        // Escucha cambios en el hash de la URL (botones atrás/adelante del navegador)
+        // y abre o cierra el modal correspondiente automáticamente
+        window.addEventListener('hashchange', function() {
+            const key = hashToNews[window.location.hash.toLowerCase()];
+
+            if (key) {
+                openModal(key, false);        // Abre la noticia sin volver a cambiar el hash
+            } else if (modal.style.display === 'flex') {
+                closeModal(false);            // Cierra el modal sin limpiar el hash de nuevo
+            }
+        });
+
+        // ── BUSCADOR ──────────────────────────────────────────────────
+        // Filtra las tarjetas de noticias según lo que el usuario escribe.
+        // Compara el nombre del artista con el texto del input (sin importar mayúsculas).
+        function filterArtists() {
+            const input = document.getElementById('artistSearch').value.toLowerCase();
+            const items = document.getElementsByClassName('news-item');
+            for (let i = 0; i < items.length; i++) {
+                const name = items[i].getElementsByClassName('artist-name')[0].innerText.toLowerCase();
+                // Muestra la tarjeta si el nombre incluye el texto buscado, si no la oculta
+                items[i].style.display = name.includes(input) ? '' : 'none';
+            }
+        }
+
+        // Al cargar la página, verifica si hay un hash en la URL y abre el modal si corresponde
+        // Esto permite enlazar directamente a una noticia específica
+        const initialNewsKey = hashToNews[window.location.hash.toLowerCase()];
+        if (initialNewsKey) {
+            openModal(initialNewsKey, false);
+        }
