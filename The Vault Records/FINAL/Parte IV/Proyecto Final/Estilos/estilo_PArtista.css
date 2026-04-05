@@ -1,0 +1,291 @@
+/* CUERPO DEL DOCUMENTO */
+body{
+    margin:0;
+    background-color: #83b888;
+}
+
+/* BARRA NEGRA */
+#cajapadre{
+    display: grid;
+    width: 100%;
+    height: 60px;
+    background-color: #000000;
+    position: sticky; /* Se ancla al inicio */
+    top: 0; 
+    z-index: 1100; /* Se asegura que quede por encima del resto de elementos */ 
+    grid-template-columns: 1fr 1fr 1fr; /* tres columnas iguales */
+    align-items: center;
+}
+
+/* CENTRAR BUSCADOR */
+#buscador{
+    justify-self: center; /* centro exacto */
+}
+
+/*CARRITO DE COMPRA A LA DERECHA DE LA BARRA NEGRA*/
+#cajapadre .cart-link{
+    justify-self: end;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 22.4px;
+    line-height: 1;
+}
+
+/*AJUSTAR ICONO DE CARRITO*/
+.icono-carrito{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*INDICAR CUANDO SE HA GUARDADO UN ELEMENTO EN EL CARRITO*/
+.icono-carrito.carrito-con-items::after{
+    content: "!";
+    position: absolute;
+    top: -7px;
+    right: -10px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #83b888;
+    color: #000000;
+    font-size: 0.65rem;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 0 0 2px #000000;
+}
+.icono-carrito.carrito-alerta-animada::after{
+    animation: alertaCarrito 0.22s ease-out;
+}
+
+@keyframes alertaCarrito{
+    from{
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* MENU LATERAL */
+#menu-lateral{
+    position: fixed;
+    top: 60px;
+    left: -300px; 
+    width: 300px;
+    height: 100vh;
+    background:#050b0c;
+    display:flex;
+    flex-direction:column;
+    padding-top:20px;
+    transition: left 0.3s ease; 
+    z-index:1000;
+}
+
+/* LINKS DEL MENU */
+#menu-lateral a{
+    padding:18px 35px;
+
+    font-family:'Montserrat', sans-serif;
+    font-size:16px; 
+    letter-spacing:2px; 
+    color:#cfcfcf;
+    text-decoration:none;
+    transition:0.2s;
+}
+#menu-lateral a:hover{
+    color:#ffffff;
+}
+#menu-lateral a.activo{
+    color:#83b888;
+    font-weight:bold;
+}
+
+/* MENU ACTIVO */
+#menu-lateral.activo{
+    left:0; 
+}
+
+/* BOTON HAMBURGUESA */
+.menu-button{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+    margin-left:20px;
+    position: relative; 
+    z-index:1100; 
+}
+.menu-button span{
+    width:28px;
+    height:3px;
+    background: #83b888;
+    display:block;
+}
+
+/* TEXTO DEL BUSCADOR */
+#inputBuscador{
+
+    width:500px;
+    padding:10px;
+    border-radius:20px;
+    border:1px solid gray;
+    font-family: 'Montserrat', sans-serif;
+    font-size:16px;
+}
+
+
+ /* ARTISTAS*/
+.artista{
+    display: table;
+}
+
+/* IMAGEN REDONDA */
+.img_redonda{   
+    float:left; 
+    margin-top: 10px;
+    width: 150px;   
+    height: 150px;  
+    border-radius: 100%; /* Hace la forma redonda */
+    object-fit: cover /* Ajusta la imagen para no deformarse */
+}
+
+/* NOMBRE DEL ARTISTA*/
+#texto1{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;              
+    font-size: 64px;             
+    font-weight: bold; 
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ /*CAVETOWN*/
+ /* CREAR UNA CUADRICULA CON 4 COLUMNAS Y QUE CENTRE TODOS SUS ELEMENTOS */
+#cavetown{
+    display: grid;
+    width: 100%;
+    height: 440px;
+    grid-template-columns: repeat(4, 1fr);  
+    justify-items: center;  /* centra horizontalmente cada columna */
+    margin-top: 10px;
+    background-color: #000000;
+}
+
+ /*DUA LIPA*/
+/* CREAR UNA CUADRICULA CON 3 COLUMNAS Y QUE CENTRE TODOS SUS ELEMENTOS */
+#dualipa{
+    display: grid;
+    width: 100%;
+    height: 440px;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columnas */
+    justify-items: center;  /* centra horizontalmente cada columna */
+    margin-top: 10px;
+    background-color: #000000;
+}
+
+ /*KANYE WEST*/
+/* CREAR UNA CUADRICULA CON 4 COLUMNAS Y 2 FILAS Y QUE CENTRE TODOS SUS ELEMENTOS */
+#kanyewest{
+    display: grid;
+    width: 100%;
+    height: 880px;
+    grid-template-columns: repeat(4, 1fr);  
+    grid-template-rows: repeat(2, 1fr); /* 2 filas */
+    justify-items: center;  /* centra horizontalmente cada columna */
+    margin-top: 10px;
+    background-color: #000000;
+}
+
+ /*TAYLOR SWIFT*/
+ /* CREAR UNA CUADRICULA CON 4 COLUMNAS Y 2 FILAS Y QUE CENTRE TODOS SUS ELEMENTOS */
+#taylorswift{
+    display: grid;
+    width: 100%;
+    height: 880px;
+    grid-template-columns: repeat(4, 1fr);  
+    grid-template-rows: repeat(2, 1fr); /* 2 filas */
+    justify-items: center;  /* centra horizontalmente cada columna */
+    margin-top: 10px;
+    background-color: #000000;
+}
+/*THE BEATLES*/
+/* CREAR UNA CUADRICULA CON 4 COLUMNAS Y 3 FILAS Y QUE CENTRE TODOS SUS ELEMENTOS */
+#thebeatles{
+    display: grid;
+    width: 100%;
+    height: 1320px;
+    grid-template-columns: repeat(4, 1fr);  
+    grid-template-rows: repeat(3, 1fr); 
+    justify-items: center;  /* centra horizontalmente cada columna */
+    margin-top: 10px;
+    background-color: #000000;
+}
+
+/*TYLER*/
+/* CREAR UNA CUADRICULA CON 4 COLUMNAS  Y QUE CENTRE TODOS SUS ELEMENTOS */
+#tyler{
+    display: grid;
+    width: 100%;
+    height: 440px;
+    grid-template-columns: repeat(4, 1fr);   
+    justify-items: center;  /* centra horizontalmente cada columna */
+    margin-top: 10px;
+    background-color: #000000;
+}
+
+/*ALBUMES*/
+
+/* IMAGEN CUADRADA */
+.img_cuadrada{
+    float:left; 
+    margin-top: 50px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* NOMBRE DEL ALBUM */
+.texto{
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18.4px;
+    color:#FFFFFF
+}
+/* PRECIO */
+.texto2{
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 17.6px;
+    color:#FFFFFF
+}
+
+/* CENTRAR LA IMAGEN JUNTO AL TEXTO */
+.album{
+    display: grid;
+    grid-template-rows: auto auto; 
+    justify-items: center;         /* centra el texto respecto a la imagen */
+    text-align: center;
+}
+.album a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
