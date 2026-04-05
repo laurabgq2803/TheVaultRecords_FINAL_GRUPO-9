@@ -2,8 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <!-- Permite usar caracteres especiales como tildes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que la página sea responsive en dispositivos móviles -->
   <title>Contáctanos | The Vault Records</title>
+  <!-- Título que aparece en la pestaña del navegador -->
 
   <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -18,7 +21,7 @@
   <!-- MENÚ A LA IZQUIERDA -->
   <nav class="menu-nav">
     <input type="checkbox" id="menu-toggle">
-
+    <!-- Botón visual del menú tipo hamburguesa -->
     <label for="menu-toggle" class="menu-button">
       <span></span>
       <span></span>
@@ -26,8 +29,9 @@
     </label>
 
     <div class="side-menu">
+            <!-- Botón para cerrar el menú -->
       <label for="menu-toggle" class="close-btn">&times;</label>
-
+<!-- Enlaces de navegación hacia las diferentes secciones del sitio -->
       <div class="menu-links">
         <a href="../../Parte I/Proyecto final/Gallery.html">INICIO</a>
         <a href="proyecto.html">QUIENES SOMOS</a>
@@ -69,32 +73,33 @@
         </div>
       </div>
     </div>
-
+    <!-- Sección del formulario de contacto -->
     <div class="form-box">
       <h3>Envíanos un mensaje</h3>
-
+<!-- Campo para el nombre -->
       <form id="contactForm">
         <div class="form-group">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
         </div>
-
+ <!-- Campo para el correo -->
         <div class="form-group">
           <label for="correo">Correo</label>
           <input type="email" id="correo" name="correo" placeholder="tucorreo@email.com">
         </div>
-
+<!-- Campo para el teléfono -->
         <div class="form-group">
           <label for="telefono">Teléfono</label>
           <input type="text" id="telefono" name="telefono" placeholder="0000-0000">
         </div>
-
+ <!-- Área de texto para el mensaje -->
         <div class="form-group">
           <label for="mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe aquí tu mensaje..."></textarea>
         </div>
-
+        <!-- Botón para enviar el formulario -->
         <button type="submit" class="send-btn">Enviar mensaje</button>
+        <!-- Mensaje dinámico que se muestra tras enviar el formulario -->
         <p id="formMessage" class="form-message"></p>
       </form>
     </div>
