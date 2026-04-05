@@ -1,10 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
-  <!-- Configuración general de la página y carga de estilos del carrito -->
+  <!-- ConfiguraciÃ³n general de la pÃ¡gina y carga de estilos del carrito -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-  <title>Carrito</title>
+  <title>Carrito | The Vault Records</title>
+    <link rel="icon" href="imagenes/icon2.png" type="image/png" sizes="45x45">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/carrito.css">
@@ -16,10 +17,10 @@
       <a class="boton-enlace" href="../../Parte IV/Proyecto Final/Productos_Artistas.html">ATR&Aacute;S</a>
     </header>
 
-    <!-- Contenedor principal del carrito con listado, total y acción de pago -->
+    <!-- Contenedor principal del carrito con listado, total y acciÃ³n de pago -->
     <main class="principal-carrito">
       <form class="formulario-carrito" action="pago.html" method="get" id="cartForm">
-        <!-- Área donde JavaScript inserta dinámicamente los productos agregados -->
+        <!-- Ãrea donde JavaScript inserta dinÃ¡micamente los productos agregados -->
         <section class="lista-carrito" aria-label="Productos del carrito" id="cartItems"></section>
 
         <!-- Resumen del monto acumulado del carrito -->
@@ -29,7 +30,7 @@
         </section>
         <input type="hidden" id="payTotalInput" name="payTotal" value="$0.00">
 
-        <!-- Botón que envía al flujo de pago manteniendo el total actual -->
+        <!-- BotÃ³n que envÃ­a al flujo de pago manteniendo el total actual -->
         <div class="contenedor-pago">
           <button class="boton-principal" id="checkoutButton" type="submit">Proseguir al pago</button>
         </div>
@@ -37,8 +38,9 @@
     </main>
   </div>
 
-  <!-- Lógica compartida del carrito y script específico de esta vista -->
+  <!-- LÃ³gica compartida del carrito y script especÃ­fico de esta vista -->
   <script src="../../Parte IV/Proyecto Final/Productos/Acciones/JavaScript.js"></script>
   <script src="js/carrito.js"></script>
 </body>
 </html>
+
