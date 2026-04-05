@@ -286,6 +286,132 @@ a{
     gap: 10px;
 }
 
+@media (max-width: 1023px){
+    #cajapadre{
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 12px;
+        padding: 0 16px;
+        height: auto;
+        min-height: 60px;
+    }
+
+    #buscador{
+        width: 100%;
+        min-width: 0;
+    }
+
+    #inputBuscador{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #cavetown,
+    #dualipa,
+    #kanyewest,
+    #taylorswift,
+    #thebeatles,
+    #tyler{
+        height: auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+        gap: 24px 16px;
+        padding: 24px 16px 32px;
+    }
+
+    .artista{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 20px 16px 0;
+    }
+
+    .img_redonda{
+        float: none;
+        margin-top: 0;
+    }
+
+    #texto1{
+        display: block;
+        padding-left: 0;
+        font-size: 48px;
+    }
+
+    .album{
+        width: 100%;
+        max-width: 280px;
+        align-self: start;
+    }
+
+    .img_cuadrada{
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 640px){
+    #cajapadre{
+        grid-template-columns: 28px minmax(0, 1fr) 28px;
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .menu-button{
+        margin-left: 0;
+    }
+
+    #cajapadre .cart-link{
+        margin-right: 0;
+        font-size: 20px;
+    }
+
+    #menu-lateral{
+        width: 260px;
+        left: -260px;
+    }
+
+    #inputBuscador{
+        font-size: 14px;
+    }
+
+    .artista{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .img_redonda{
+        width: 120px;
+        height: 120px;
+    }
+
+    #texto1{
+        font-size: 32px;
+    }
+
+    #cavetown,
+    #dualipa,
+    #kanyewest,
+    #taylorswift,
+    #thebeatles,
+    #tyler{
+        grid-template-columns: 1fr;
+        padding: 20px 12px 28px;
+    }
+
+    .album{
+        max-width: 100%;
+    }
+
+    .texto,
+    .texto2{
+        font-size: 16px;
+    }
+}
+
 
 
 

@@ -294,20 +294,27 @@
         // New-arrivals
         let currentArrivalPos = 0;
 
+        function getVisibleArrivalItems() {
+            if (window.innerWidth <= 767) return 1;
+            if (window.innerWidth <= 1023) return 2;
+            return 3;
+        }
+
         function moveArrivals(direction) {
             const slider = document.getElementById('arrivals-slider');
             const totalItems = 5;
-            const visibleItems = 3;
-            const maxPos = totalItems - visibleItems; // Solo puede moverse 2 veces
+            const visibleItems = getVisibleArrivalItems();
+            const maxPos = Math.max(totalItems - visibleItems, 0);
 
             currentArrivalPos += direction;
 
             if (currentArrivalPos < 0) currentArrivalPos = 0;
             if (currentArrivalPos > maxPos) currentArrivalPos = maxPos;
 
-            // Movemos un 33.33% por cada clic
-            slider.style.transform = `translateX(-${currentArrivalPos * 33.333}%)`;
+            slider.style.transform = `translateX(-${currentArrivalPos * (100 / visibleItems)}%)`;
         }
+
+        window.addEventListener('resize', () => moveArrivals(0));
     </script>
 
 </body>

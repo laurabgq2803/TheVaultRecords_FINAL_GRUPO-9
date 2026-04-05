@@ -705,3 +705,160 @@ button, .btn-slider, .arrival-nav {
 }
 
 }
+
+@media screen and (max-width: 1023px) {
+    .slider-text {
+        max-width: min(70vw, 520px);
+    }
+
+    .color-slide {
+        font-size: clamp(2rem, 5vw, 3rem);
+        letter-spacing: 3px;
+    }
+
+    .arrivals-wrapper {
+        padding: 0 16px;
+    }
+
+    .arrivals-window {
+        width: 100%;
+    }
+
+    .product-card {
+        min-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .vinyl-wrapper {
+        width: min(320px, 100%);
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .top-menu-bar {
+        padding: 16px;
+    }
+
+    .menu-button {
+        top: 16px;
+        left: 16px;
+    }
+
+    .side-menu {
+        width: min(280px, 85vw);
+        left: calc(-1 * min(280px, 85vw));
+    }
+
+    .slider-text {
+        left: 0;
+        top: 50%;
+        width: 100%;
+        max-width: none;
+        padding: 0 56px;
+        text-align: center;
+    }
+
+    .color-slide {
+        font-size: clamp(1.35rem, 7vw, 2rem);
+        letter-spacing: 2px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .btn-slider {
+        padding: 10px 24px;
+        font-size: 0.8rem;
+    }
+
+    .slider-nav {
+        padding: 12px 10px;
+        font-size: 1.2rem;
+    }
+
+    .prev {
+        left: 8px;
+    }
+
+    .next {
+        right: 8px;
+    }
+
+    .slider-indicators {
+        bottom: 22px;
+        gap: 10px;
+    }
+
+    .new-arrivals {
+        padding: 72px 0;
+    }
+
+    .section-title {
+        margin-bottom: 36px;
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+
+    .arrivals-wrapper {
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    .product-card {
+        min-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .vinyl-wrapper {
+        width: min(280px, 100%);
+        height: 210px;
+    }
+
+    .album-cover {
+        width: 190px;
+        height: 190px;
+    }
+
+    .vinyl-disk {
+        width: 180px;
+        height: 180px;
+        left: 50px;
+    }
+
+    .arrival-nav {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .album-info p {
+        font-size: 0.8rem;
+    }
+
+    .more-container {
+        margin-top: 24px;
+        padding: 0 12px 32px;
+    }
+
+    .btn-more {
+        width: 100%;
+        max-width: 320px;
+        padding: 12px 24px;
+        transform: none;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    .news-headline {
+        font-size: 1rem;
+    }
+}

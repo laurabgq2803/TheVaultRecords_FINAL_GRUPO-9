@@ -1,3 +1,4 @@
+/* Variables base de color y grosor para toda la vista del carrito */
 :root {
   --accent: #83b888;
   --ink: #000;
@@ -5,10 +6,12 @@
   --line: 3px;
 }
 
+/* Ajustes generales de caja para un layout consistente */
 * {
   box-sizing: border-box;
 }
 
+/* Estilos base de la página */
 body {
   margin: 0;
   min-height: 100vh;
@@ -22,12 +25,14 @@ input {
   font: inherit;
 }
 
+/* Contenedor global de la pantalla */
 .pagina {
   width: 100%;
   min-height: 100vh;
   background: var(--paper);
 }
 
+/* Barra superior de navegación */
 .barra-superior {
   display: flex;
   align-items: center;
@@ -48,6 +53,7 @@ input {
   font-weight: 700;
 }
 
+/* Estilo compartido del enlace de regreso y el icono superior */
 .boton-enlace,
 .simbolo-superior {
   color: inherit;
@@ -65,6 +71,7 @@ input {
   color: var(--accent);
 }
 
+/* Indicador visual del estado del carrito en el icono */
 .icono-carrito {
   position: relative;
   display: inline-flex;
@@ -113,10 +120,12 @@ input {
   outline-offset: 4px;
 }
 
+/* Área principal que contiene el formulario del carrito */
 .principal-carrito {
   min-height: calc(100vh - 69px);
 }
 
+/* Distribución general entre listado y resumen */
 .formulario-carrito {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 32%;
@@ -124,6 +133,7 @@ input {
   margin: 0;
 }
 
+/* Columna donde se muestran todos los productos agregados */
 .lista-carrito {
   grid-column: 1;
   grid-row: 1 / span 2;
@@ -131,6 +141,7 @@ input {
   border-right: var(--line) solid #000;
 }
 
+/* Tarjeta individual de cada producto del carrito */
 .articulo-carrito {
   display: grid;
   grid-template-columns: 250px minmax(0, 1fr) 190px;
@@ -139,6 +150,7 @@ input {
   padding: 30px 0;
 }
 
+/* Marco de imagen del producto */
 .marco-imagen {
   width: 250px;
   height: 250px;
@@ -152,6 +164,7 @@ input {
   object-fit: cover;
 }
 
+/* Bloque informativo de nombre, precio y subtotal */
 .titulo-articulo {
   margin: 0;
   font-size: 2.2rem;
@@ -170,6 +183,7 @@ input {
   font-weight: 700;
 }
 
+/* Panel de control de cantidad y eliminación */
 .panel-cantidad {
   display: flex;
   flex-direction: column;
@@ -184,6 +198,7 @@ input {
   font-weight: 700;
 }
 
+/* Grupo visual para los botones de aumentar y disminuir cantidad */
 .caja-cantidad {
   width: 100%;
   max-width: 180px;
@@ -195,6 +210,7 @@ input {
   gap: 20px;
 }
 
+/* Botones de control de cantidad */
 .boton-cantidad {
   width: 40px;
   height: 40px;
@@ -217,6 +233,7 @@ input {
   outline-offset: 2px;
 }
 
+/* Acción para eliminar un producto del carrito */
 .boton-eliminar {
   border: 0;
   padding: 0;
@@ -248,11 +265,13 @@ input {
   font-weight: 400;
 }
 
+/* Separador entre productos renderizados */
 .divisor-articulo {
   height: var(--line);
   background: #000;
 }
 
+/* Columna lateral del total acumulado */
 .panel-total {
   grid-column: 2;
   grid-row: 1;
@@ -264,6 +283,7 @@ input {
   gap: 16px;
 }
 
+/* Valores principales del resumen del carrito */
 .etiqueta-total {
   margin: 0;
   font-size: 2rem;
@@ -276,6 +296,7 @@ input {
   line-height: 1;
 }
 
+/* Contenedor del botón para continuar al pago */
 .contenedor-pago {
   grid-column: 2;
   grid-row: 2;
@@ -284,6 +305,7 @@ input {
   align-items: flex-end;
 }
 
+/* Botón principal del flujo */
 .boton-principal {
   width: 100%;
   min-height: 56px;
@@ -313,6 +335,7 @@ input {
   background: #555;
 }
 
+/* Estado visual del carrito cuando no hay productos */
 .lista-carrito.vacia {
   display: flex;
   align-items: center;
@@ -327,6 +350,7 @@ input {
   text-align: center;
 }
 
+/* Clase utilitaria para contenido accesible solo para lectores de pantalla */
 .solo-lectores {
   position: absolute;
   width: 1px;
@@ -339,12 +363,14 @@ input {
   border: 0;
 }
 
+/* Normalización visual de controles numéricos en navegadores WebKit */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
 }
 
+/* Ajustes generales para pantallas medianas */
 @media (max-width: 1100px) {
   .formulario-carrito {
     grid-template-columns: 1fr;
@@ -372,6 +398,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
+/* Ajustes específicos para pantallas pequeñas */
 @media (max-width: 760px) {
   .barra-superior {
     padding: 15px 18px;

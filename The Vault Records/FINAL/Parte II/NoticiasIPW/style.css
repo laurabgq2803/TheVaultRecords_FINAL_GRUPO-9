@@ -442,3 +442,38 @@ body, p, input, .modal-body, .search-bar input {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
+
+@media (max-width: 640px) {
+    .navbar {
+        gap: 12px;
+        padding: 10px 12px;
+    }
+
+    .search-bar-container {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .search-bar {
+        padding: 5px 16px;
+        max-width: none;
+    }
+
+    .nav-empty-right {
+        display: none;
+    }
+
+    .header-green {
+        padding: 28px 20px;
+    }
+
+    .news-wrapper {
+        padding: 20px 16px;
+    }
+
+    .artist-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

@@ -165,4 +165,54 @@ font-size:18px;
     background: #000000;
 }
 
+@media (max-width: 1023px){
+    #contenido{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    #izquierda{
+        border-right: 0;
+        border-bottom: 3px solid black;
+    }
+
+    .imagen{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .boton{
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px){
+    #barra{
+        padding: 15px 16px;
+    }
+
+    #barra a,
+    #barra > span{
+        font-size: 1.1rem;
+    }
+
+    #izquierda,
+    #derecha{
+        padding: 20px 16px;
+    }
+
+    .imagen{
+        width: min(250px, 100%);
+    }
+
+    .cantidad{
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .botones{
+        margin-top: 32px;
+    }
+}
+
 

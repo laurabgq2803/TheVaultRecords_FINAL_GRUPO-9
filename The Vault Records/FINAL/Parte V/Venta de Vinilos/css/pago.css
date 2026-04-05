@@ -1,3 +1,4 @@
+/* Variables base de color y grosor para la pantalla de pago */
 :root {
   --accent: #83b888;
   --ink: #000;
@@ -9,6 +10,7 @@
   box-sizing: border-box;
 }
 
+/* Estilos generales de la página */
 body {
   margin: 0;
   min-height: 100vh;
@@ -22,17 +24,20 @@ a {
   text-decoration: none;
 }
 
+/* Herencia tipográfica para controles del formulario */
 button,
 input {
   font: inherit;
 }
 
+/* Contenedor principal de toda la vista */
 .pagina {
   width: 100%;
   min-height: 100vh;
   background: var(--paper);
 }
 
+/* Barra superior de navegación */
 .barra-superior {
   display: flex;
   align-items: center;
@@ -57,6 +62,7 @@ input {
   font-weight: 700;
 }
 
+/* Tipografía principal para títulos, etiquetas y botones */
 .titulo-superior,
 .boton-enlace {
   font-size: 1.4rem;
@@ -84,16 +90,19 @@ input {
   outline-offset: 4px;
 }
 
+/* Área principal que contiene el panel de pago */
 .principal-pago {
   min-height: calc(100vh - 69px);
 }
 
+/* Distribución del resumen y los campos del formulario */
 .panel-pago {
   display: grid;
   grid-template-columns: 30% minmax(0, 1fr);
   min-height: inherit;
 }
 
+/* Columna lateral del resumen de compra */
 .resumen-pago {
   padding: 30px;
   border-right: var(--line) solid #000;
@@ -103,6 +112,7 @@ input {
   gap: 20px;
 }
 
+/* Titulación y texto descriptivo del resumen */
 .titulo-seccion {
   margin: 0;
   font-size: 2.25rem;
@@ -122,6 +132,7 @@ input {
   letter-spacing: 2px;
 }
 
+/* Columna principal con los datos del pago */
 .campos-pago {
   padding: 30px 40px;
   display: flex;
@@ -136,6 +147,7 @@ input {
   text-transform: uppercase;
 }
 
+/* Campos de entrada y caja visual del total */
 .entrada-estilizada,
 .caja-total {
   width: min(560px, 100%);
@@ -160,6 +172,7 @@ input {
   color: #666;
 }
 
+/* Fila que agrupa las opciones del método de pago */
 .fila-metodo {
   margin-top: 4px;
   display: flex;
@@ -177,6 +190,7 @@ input {
   pointer-events: none;
 }
 
+/* Estilo base de botones de selección y acciones principales */
 .boton-metodo,
 .boton-principal,
 .boton-cerrar-modal {
@@ -201,6 +215,7 @@ input {
   user-select: none;
 }
 
+/* Estado activo del método de pago seleccionado */
 .boton-metodo:hover,
 .boton-principal:hover,
 .boton-cerrar-modal:hover {
@@ -211,6 +226,7 @@ input {
   background: var(--accent);
 }
 
+/* Caja visual del total mostrado */
 .caja-total {
   display: flex;
   align-items: center;
@@ -219,14 +235,17 @@ input {
   font-size: 1.5rem;
 }
 
+/* Espaciado del botón para finalizar la compra */
 .contenedor-finalizar {
   margin-top: 40px;
 }
 
+/* Botón principal del flujo de pago */
 .boton-principal {
   width: min(560px, 100%);
 }
 
+/* Fondo del modal de confirmación */
 .fondo-modal {
   position: fixed;
   inset: 0;
@@ -245,6 +264,7 @@ input {
   pointer-events: auto;
 }
 
+/* Tarjeta del modal de compra completada */
 .tarjeta-modal {
   width: min(480px, 100%);
   padding: 30px;
@@ -259,11 +279,13 @@ input {
   line-height: 1.2;
 }
 
+/* Botón para salir tras confirmar la compra */
 .boton-cerrar-modal {
   width: min(220px, 100%);
   margin-top: 24px;
 }
 
+/* Ajustes de layout para pantallas medianas y pequeñas */
 @media (max-width: 900px) {
   .barra-superior {
     padding: 15px 18px;

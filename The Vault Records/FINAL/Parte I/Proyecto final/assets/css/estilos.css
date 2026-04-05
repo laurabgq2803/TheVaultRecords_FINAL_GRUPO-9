@@ -228,3 +228,53 @@ header.hero::before {
 }
 
 button, .button-back, .btn-slider, .arrival-nav { border-radius: 50px; }
+
+@media (max-width: 767px) {
+    .info-promos {
+        height: 36px;
+    }
+
+    .promo-content {
+        gap: 36px;
+        padding-right: 36px;
+    }
+
+    .promo-content span {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .menu-button {
+        top: 52px;
+        right: 20px;
+    }
+
+    .side-menu {
+        width: min(280px, 85vw);
+        right: calc(-1 * min(280px, 85vw));
+        padding: 90px 24px 24px;
+    }
+
+    .close-btn {
+        right: 24px;
+    }
+
+    header.hero {
+        min-height: calc(100vh - 36px);
+    }
+
+    .content-overlay {
+        padding: 0 24px;
+        gap: 1.75rem;
+    }
+
+    .logo {
+        width: min(78vw, 340px);
+    }
+
+    .button {
+        padding: 13px 28px;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+    }
+}
