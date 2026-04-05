@@ -264,58 +264,6 @@
             <button class="btn-more" onclick="window.location.href='../../Parte II/NoticiasIPW/noticias5-ipw.html'">MOSTRAR MÁS</button>
         </div>
     </section>
-
-    <script>
-        let currentSlide = 0;
-        const slider = document.querySelector('.slider');
-        const dots = document.querySelectorAll('.dot');
-        const totalSlides = 7;
-
-        function updateSlider() {
-            slider.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        function moveSlide(direction) {
-            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-            updateSlider();
-        }
-
-        function currentSlidePos(pos) {
-            currentSlide = pos;
-            updateSlider();
-        }
-
-        // Auto-play cada 6 segundos
-        setInterval(() => moveSlide(1), 6000);
-
-        // New-arrivals
-        let currentArrivalPos = 0;
-
-        function getVisibleArrivalItems() {
-            if (window.innerWidth <= 767) return 1;
-            if (window.innerWidth <= 1023) return 2;
-            return 3;
-        }
-
-        function moveArrivals(direction) {
-            const slider = document.getElementById('arrivals-slider');
-            const totalItems = 5;
-            const visibleItems = getVisibleArrivalItems();
-            const maxPos = Math.max(totalItems - visibleItems, 0);
-
-            currentArrivalPos += direction;
-
-            if (currentArrivalPos < 0) currentArrivalPos = 0;
-            if (currentArrivalPos > maxPos) currentArrivalPos = maxPos;
-
-            slider.style.transform = `translateX(-${currentArrivalPos * (100 / visibleItems)}%)`;
-        }
-
-        window.addEventListener('resize', () => moveArrivals(0));
-    </script>
-
+    <script src="assets/js/slider_galeria.js"></script>
 </body>
 </html>
