@@ -1,4 +1,4 @@
-//MENU LATERAL
+//MENU LATERAL 1
 function toggleMenu(){
     const menu = document.getElementById("menu-lateral");
     const boton = document.querySelector(".menu-button");
