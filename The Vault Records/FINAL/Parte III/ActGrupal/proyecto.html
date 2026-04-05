@@ -1,32 +1,52 @@
 <!DOCTYPE html>
+<!-- Documento HTML5 -->
+
 <html lang="es">
+<!-- Se define el idioma en español para mejorar accesibilidad  -->
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Vault Records</title>
+  <!-- Permite usar caracteres especiales -->
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que el sitio sea responsive en dispositivos móviles -->
+
+  <title>The Vault Records</title>
+  <!-- Título de la página en la pestaña del navegador -->
+
+  <!-- Importación de fuentes desde Google Fonts para mejorar la estética -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Hoja de estilos principal -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
+<!-- Barra superior de navegación -->
 <header class="topbar">
 
-  <!-- MENÚ IZQUIERDA -->
+  <!-- Menú lateral desplegable (lado izquierdo) -->
   <nav class="menu-nav">
+
+    <!-- Checkbox usado para controlar el estado del menú (abierto/cerrado) -->
     <input type="checkbox" id="menu-toggle">
 
+    <!-- Botón tipo hamburguesa -->
     <label for="menu-toggle" class="menu-button">
       <span></span>
       <span></span>
       <span></span>
     </label>
 
+    <!-- Menú lateral -->
     <div class="side-menu">
+
+      <!-- Botón para cerrar el menú -->
       <label for="menu-toggle" class="close-btn">&times;</label>
 
+      <!-- Enlaces de navegación -->
       <div class="menu-links">
         <a href="../../Parte I/Proyecto final/Gallery.html">INICIO</a>
         <a href="proyecto.html">QUIENES SOMOS</a>
@@ -38,16 +58,20 @@
     </div>
   </nav>
 
-
 </header>
 
+<!-- Contenido principal de la página -->
 <main class="main-content">
 
+  <!-- Sección introductoria sobre la empresa -->
   <section class="about-card">
+
+    <!-- Imagen del logo -->
     <div class="image-box">
       <img src="logo.png" alt="Logo The Vault Records">
     </div>
 
+    <!-- Texto descriptivo -->
     <div class="about-text">
       <h1>Quiénes somos</h1>
       <p>
@@ -58,8 +82,10 @@
     </div>
   </section>
 
+  <!-- Sección de misión y visión -->
   <section class="mv-section">
 
+    <!-- Bloque de misión -->
     <article class="mv-box">
       <h2>Misión</h2>
       <p>
@@ -69,10 +95,12 @@
       </p>
     </article>
 
+    <!-- Imagen central decorativa -->
     <div class="image-box center-image">
       <img src="turntable.png" alt="Tocadiscos">
     </div>
 
+    <!-- Bloque de visión -->
     <article class="mv-box">
       <h2>Visión</h2>
       <p>
