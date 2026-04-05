@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<!-- Documento HTML5 para la página de contacto -->
+
+<html lang="es">
+<!-- Se define el idioma en español para accesibilidad  -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Permite usar caracteres especiales como tildes -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que la página sea responsive en dispositivos móviles -->
+
+  <title>Contáctanos | The Vault Records</title>
+  <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Fuentes importadas desde Google Fonts para mejorar la estética -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Archivo CSS externo donde se define el diseño de la página -->
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+
+<body>
+
+<!-- Encabezado superior que contiene el menú de navegación -->
+<header class="topbar">
+
+  <!-- Menú lateral desplegable ubicado en la izquierda -->
+  <nav class="menu-nav">
+
+    <!-- Checkbox utilizado para controlar la apertura/cierre del menú -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Botón visual del menú tipo hamburguesa -->
+    <label for="menu-toggle" class="menu-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Contenedor del menú lateral -->
+    <div class="side-menu">
+
+      <!-- Botón para cerrar el menú -->
+      <label for="menu-toggle" class="close-btn">&times;</label>
+
+      <!-- Enlaces de navegación hacia las diferentes secciones del sitio -->
+      <div class="menu-links">
+        <a href="Gallery.html">INICIO</a>
+        <a href="proyecto.html">QUIENES SOMOS</a>
+        <a href="noticias5-ipw.html">NOTICIAS</a>
+        <a href="Productos_Artistas.html">ARTISTAS</a>
+        <a href="contato.html">CONTACTANOS</a>
+        <a href="FAQ.html">FAQs</a>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<!-- Contenido principal de la página de contacto -->
+<main class="contact-page">
+
+  <!-- Tarjeta que agrupa la información y el formulario -->
+  <section class="contact-card">
+
+    <!-- Sección con información de contacto -->
+    <div class="contact-info">
+
+      <h2>Hablemos de música, vinilos y pedidos</h2>
+
+      <!-- Texto introductorio para el usuario -->
+      <p class="intro">
+        ¿Tenés dudas, querés pedir un vinilo especial o simplemente escribirnos?
+        Mandanos un mensaje y te responderemos lo antes posible.
+      </p>
+
+      <!-- Lista de datos de contacto -->
+      <div class="info-list">
+
+        <div class="info-item">
+          <span class="info-title">Correo</span>
+          <span class="info-text">vaultrcr@gmail.com</span>
+        </div>
+
+        <div class="info-item">
+          <span class="info-title">Teléfono</span>
+          <span class="info-text">1800-0000</span>
+        </div>
+
+        <div class="info-item">
+          <span class="info-title">Horario</span>
+          <span class="info-text">Lunes a Viernes · 8:00 AM - 5:00 PM</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Sección del formulario de contacto -->
+    <div class="form-box">
+
+      <h3>Envíanos un mensaje</h3>
+
+      <!-- Formulario que permite a los usuarios enviar mensajes -->
+      <form id="contactForm">
+
+        <!-- Campo para el nombre -->
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+        </div>
+
+        <!-- Campo para el correo electrónico -->
+        <div class="form-group">
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" placeholder="tucorreo@email.com">
+        </div>
+
+        <!-- Campo para el teléfono -->
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="text" id="telefono" name="telefono" placeholder="0000-0000">
+        </div>
+
+        <!-- Área de texto para el mensaje -->
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe aquí tu mensaje..."></textarea>
+        </div>
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit" class="send-btn">Enviar mensaje</button>
+
+        <!-- Mensaje dinámico que se muestra tras enviar el formulario -->
+        <p id="formMessage" class="form-message"></p>
+
+      </form>
+    </div>
+
+  </section>
+</main>
+
+<!-- Archivo JavaScript que maneja la lógica del formulario -->
+<script src="jscript/contacto.js"></script>
+
+</body>
+</html>
+
