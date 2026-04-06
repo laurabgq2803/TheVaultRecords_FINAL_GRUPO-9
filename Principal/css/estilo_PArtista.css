@@ -358,11 +358,19 @@ a{
         padding: 10px 12px;
     }
 
+    #buscador{
+        justify-self: stretch;
+        min-width: 0;
+    }
+
     .menu-button{
         margin-left: 0;
     }
 
     #cajapadre .cart-link{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         margin-right: 0;
         font-size: 20px;
     }
@@ -373,6 +381,10 @@ a{
     }
 
     #inputBuscador{
+        display: block;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
         font-size: 14px;
     }
 
