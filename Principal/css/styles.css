@@ -48,7 +48,7 @@ body{
 .menu-nav{
   position: absolute;
   left: 20px;
-  z-index: 1100;
+  z-index: 1300; /* se aumenta para asegurar prioridad sobre otros elementos */
 }
 
 /* oculto checkbox */
@@ -62,6 +62,8 @@ body{
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
+  position: relative;
+  z-index: 1400; /* asegura que siempre sea clickeable */
 }
 
 /* líneas del botón */
@@ -76,7 +78,7 @@ body{
 .side-menu{
   position: fixed;
   top: 0;
-  left: -300px; /* oculto */
+  left: -300px; /* oculto inicialmente fuera de pantalla */
   width: 300px;
   height: 100vh;
   background: #050b0c;
@@ -84,12 +86,23 @@ body{
   flex-direction: column;
   padding-top: 78px;
   transition: left 0.4s ease;
-  z-index: 1000;
+  z-index: 1200; /* queda por debajo del botón pero encima del contenido */
 }
 
 /* cuando se activa el checkbox se muestra */
 #menu-toggle:checked ~ .side-menu{
   left: 0;
+}
+
+/* 
+corrección:
+cuando el menú está abierto, el botón hamburguesa se fija en pantalla
+para evitar que quede oculto detrás del menú lateral
+*/
+#menu-toggle:checked ~ .menu-button{
+  position: fixed;
+  top: 18px;
+  left: 20px;
 }
 
 /* botón cerrar (no se usa) */
