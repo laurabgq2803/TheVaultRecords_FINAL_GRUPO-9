@@ -25,7 +25,7 @@ body{
 /*CARRITO DE COMPRA A LA DERECHA DE LA BARRA NEGRA*/
 #cajapadre .cart-link{
     justify-self: end;
-    margin-right: 40px;
+    margin-right: 20px;
     color: white;
     text-decoration: none;
     font-size: 22.4px;
